@@ -1,0 +1,61 @@
+.logoslider-wrap {
+	padding: 5rem 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 5rem;
+}
+.logoslider {
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+	height: 13rem;
+}
+.logoslider-slide {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	transition: transform 1s;
+}
+.logoslider-img {
+	width: 15rem;
+	height: 12rem;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+/* controls */
+.logoslider-controls {
+	height: auto;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 1rem;
+}
+.logoslider-btn {
+	width: 1rem;
+	height: 1rem;
+	border: 1px solid var(--color-primary);
+	border-radius: 50%;
+	cursor: pointer;
+	background-color: var(--color-primary);
+}
+.active-slider-btn.logoslider-btn {
+	background-color: var(--color-secondary);
+}
+.logoslider-arrow {
+	width: 2.7rem;
+	height: 2.7rem;
+	fill: transparent;
+	stroke: var(--color-primary);
+	cursor: pointer;
+}
+.logoslider-arrow:first-child {
+	margin-right: 2rem;
+}
+.logoslider-arrow:last-child {
+	margin-left: 2rem;
+}

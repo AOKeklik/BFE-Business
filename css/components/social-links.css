@@ -1,0 +1,28 @@
+.socialmedia-links {
+	position: fixed;
+	top: 50%;
+	right: 0;
+	width: 3.5rem;
+	line-height: 0;
+}
+.socialmedia-links a {
+	width: 100%;
+	height: 3.5rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.socialmedia-icon {
+	width: 2.5rem;
+	height: 2.5rem;
+	fill: var(--color-white);
+}
+.socialmedia-primary {
+	background-color: #005e91;
+}
+.socialmedia-secondary {
+	background-color: #0e76a8;
+}
+.socialmedia-tertiary {
+	background-color: #ff0000;
+}

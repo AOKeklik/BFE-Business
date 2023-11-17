@@ -1,0 +1,95 @@
+.accordion {
+	display: flex;
+	flex-direction: column;
+	gap: 10rem;
+}
+.accordion-control {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	gap: 1rem;
+}
+.accordion-btn {
+	flex: 1 0 calc((100% - 7rem) / 7);
+	max-width: 60rem;
+	padding: 1rem 2rem;
+	background-color: var(--color-primary);
+	color: var(--color-white);
+	font-size: 1.7rem;
+	cursor: pointer;
+	font-weight: 600;
+	text-wrap: nowrap;
+	text-align: center;
+}
+.accordion-panles-wrapper {
+}
+.accordion-panels {
+	visibility: hidden;
+	height: 0;
+	opacity: 0;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10rem 2rem;
+	transition: opacity 0.3s 0s;
+}
+.accordion-panel {
+	flex: 1 0 calc((100% - 4rem) / 3);
+}
+.accordion-box {
+	position: relative;
+	background-color: var(--color-primary);
+	border-radius: 3px;
+}
+.accordion-box::before {
+	position: absolute;
+	content: url(../../img/employees/comment-outlined.svg);
+	top: 0;
+	left: 0;
+	width: 15rem;
+	height: 15rem;
+	fill: #fff;
+	opacity: 0.1;
+	color: var(--color-white);
+}
+.accordion-img {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 15rem;
+	height: 15rem;
+	object-fit: cover;
+	object-position: center;
+	border-radius: 50%;
+}
+.accordion-text {
+	padding: 10rem 2rem 3rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 1rem;
+	font-size: 2rem;
+	color: var(--color-white);
+}
+/* active */
+.active-accordion-btn {
+	position: relative;
+	background-color: var(--color-secondary);
+}
+.active-accordion-btn::after {
+	content: "\25BC";
+	position: absolute;
+	bottom: -0.7rem;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: var(--color-secondary);
+	font-size: 2rem;
+	line-height: 0;
+}
+.active-accordion.accordion-panels {
+	visibility: visible;
+	height: auto;
+	opacity: 1;
+	transition: opacity 0.3s 0.3s;
+}

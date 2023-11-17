@@ -1,0 +1,24 @@
+/* header */
+@keyframes bottom-btn {
+	0% {
+		transform: translate(0, -100%);
+	}
+	100% {
+		transform: translate(0, 100%);
+	}
+}
+/* why */
+.animated-gear {
+	transform-origin: 50% 50%;
+	transform: rotate(calc(1deg * (var(--scrollWhy) * 5)));
+	transition: transform 0.1s;
+}
+/* product archive */
+.animated-product-img img {
+	transform: scale(1);
+	transition: transform 0.5s;
+}	
+.animated-product-img:hover img {
+	transform: scale(1.2);
+	transition: transform 0.5s;
+}	

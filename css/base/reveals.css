@@ -1,0 +1,96 @@
+/* marker heading */
+.bg-marker {
+	position: relative;
+	z-index: 0;
+}
+.bg-marker::after {
+	position: absolute;
+	content: "";
+	z-index: -1;
+	top: -50%;
+	left: -50%;
+	width: 40rem;
+	height: 10rem;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+	transition: clip-path 0.3s ease-out 0.3s;
+}
+.marker-blue::after {
+	background-image: url("../../img/header/headermarkerblue.png");
+}
+.marker-yellow::after {
+	background-image: url("../../img/header/headermarker.png");
+}
+/* reveal */
+/* header */
+.reveal .header-up-btn {
+	visibility: hidden;
+	opacity: 0;
+	transition: opacity 0.3s, visibility 0s 0.3s;
+}
+.header-up-btn {
+	visibility: visible;
+	opacity: 1;
+	transition: opacity 0.3s, visibility 0s 0s;
+}
+/* page */
+.reveal-page-title {
+	opacity: 0;
+	transform: translate(0, 100%);
+	transition: transform 0.5s, opacity 0.5s;
+}
+.reveal .reveal-page-title {
+	opacity: 1;
+	transform: translate(0, 0);
+}
+
+/* homepage section general */
+.reveal .bg-marker::after {
+	clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+/* homepage history */
+.section-history .row img {
+	opacity: 0;
+	transform: translate(10%, 10%);
+	transition: transform 0.5s, opacity 0.5s;
+}
+.section-history .row-reverse img {
+	opacity: 0;
+	transform: translate(-10%, 10%);
+	transition: transform 0.5s, opacity 0.5s;
+}
+.reveal.section-history img {
+	opacity: 1;
+	transform: translate(0, 0);
+}
+/* product single page */
+.product-bgimage img {
+	opacity: 0;
+	transform: translate(30%, 30%);
+	transition: transform 0.5s, opacity 0.5s;
+}
+.container .product-textbox {
+	opacity: 0;
+	transform: translate(0, 50%);
+	transition: transform 1s, opacity 1s;
+}
+.product-textbox-right img:first-child {
+	opacity: 0;
+	transform: translate(50%, 0);
+	transition: transform 1s, opacity 1s;
+}
+.product-textbox-right img:last-child {
+	opacity: 0;
+	transform: translate(50%, 0);
+	transition: transform 1s 0.5s, opacity 1s 0.5s;
+}
+
+.product-bgimage.reveal img,
+.container.reveal .product-textbox,
+.product-textbox-right.reveal img {
+	opacity: 1;
+	transform: translate(0, 0);
+}
+/* products page */

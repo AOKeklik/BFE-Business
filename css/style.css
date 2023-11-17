@@ -1,0 +1,24 @@
+/* pages */
+@import "./pages/single-product.css";
+@import "./pages/contact.css";
+@import "./pages/pages.css";
+@import "./pages/home.css";
+/* components */
+@import "./components/accordion.css";
+@import "./components/newsslider.css";
+@import "./components/social-links.css";
+@import "./components/logoslider.css";
+@import "./components/why.css";
+@import "./components/heroslider.css";
+@import "./components/btn.css";
+@import "./components/footer.css";
+@import "./components/header.css";
+/* base */
+@import "./base/animations.css";
+@import "./base/reveals.css";
+@import "./base/typography.css";
+@import "./base/utilities.css";
+@import "./base/veriables.css";
+@import "./base/layout.css";
+@import "./base/queries.css";
+@import "./base/base.css";

@@ -1,0 +1,54 @@
+.newsslider {
+	position: relative;
+	width: 100%;
+	height: 20rem;
+}
+.newsslider-slides {
+	scroll-behavior: smooth;
+	overflow: hidden;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	transition: left 1s;
+}
+.newsslider-slide {
+	flex: 1 0 calc((100% - 3rem) / 4);
+	height: 100%;
+	background-position: center;
+	background-size: cover;
+}
+.newsslider-btn {
+	display: inline-block;
+	position: absolute;
+	top: 50%;
+	background-color: var(--color-primary);
+	padding: 1rem;
+	border-radius: 50%;
+	cursor: pointer;
+}
+.newsslider-left {
+	left: 0;
+	transform: translate(-50%, -50%);
+}
+.newsslider-right {
+	right: 0;
+	transform: translate(50%, -50%);
+}
+.newsslider-icon {
+	width: 2.5rem;
+	height: 2.5rem;
+	fill: var(--color-white);
+}
+/* active */
+.newsslider-slides.dragging {
+	scroll-behavior: auto;
+	cursor: grab;
+}
+.hide {
+	cursor: auto;
+	visibility: hidden;
+	opacity: 0;
+	pointer-events: none;
+	transition: 0.3s;
+}

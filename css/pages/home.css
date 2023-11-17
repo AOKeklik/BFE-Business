@@ -1,0 +1,20 @@
+/* main */
+/* history section */
+.section-history {
+	padding: 5rem 0;
+}
+/* history section */
+.section-why {
+	height: calc(50vh + 5rem);
+	padding: 10rem 0 5rem;
+	background-color: var(--color-primary);
+}
+/* about */
+.section-about {
+	padding: 5rem 0;
+	background-color: var(--color-primary);
+}
+/* logo slider */
+.section-logoslider {
+	padding: 5rem 0;
+}
