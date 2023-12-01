@@ -1,26 +1,46 @@
 export default class MakeList {
-	constructor(parent) {
-		this.parent = document.querySelector(parent)
-		this.doListItems()
+	constructor(parent, element = undefined) {
+		this.parentElement = document.querySelectorAll(parent)
+		this.element = element
+
+		this.parentElement.forEach(el => {
+			this.doListItems(el)
+		})
 	}
 
-	doListItems() {
-		const texts = this.parent.textContent.split(",")
+	doListItems(parent) {
+		const texts = parent.innerHTML.split(",")
 
-		const renderLi = texts
-			.map(el => {
-				return `<li>${el}</li>`
-			})
-			.join("")
+		console.log(texts)
 
-		const marker = `
-            <ul>
-                ${renderLi}
-            </ul>
-        `
+		let renderElement
+		let marker
 
-		this.parent.innerHTML = ""
+		
+			renderElement = texts
+				.map(el => {
+					return `<li>${el}</li>`
+				})
+				.join("")
 
-		this.parent.insertAdjacentHTML("afterbegin", marker)
+			marker = `
+				<ul>
+					${renderElement}
+				</ul>
+			`
+		
+		if (this.element === "address") {
+			renderElement = texts
+				.map(el => {
+					return `<span class="color-primary text-size-m text-style-n">${el}</span>`
+				})
+				.join("")
+
+			marker = renderElement
+		}
+
+		parent.innerHTML = ""
+
+		parent.insertAdjacentHTML("afterbegin", marker)
 	}
 }

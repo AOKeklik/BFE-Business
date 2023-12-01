@@ -1,7 +1,7 @@
-import LoadData from "../components/LoadData.js"
 import Map from "../components/Map.js"
 import RevealSections from "../components/RevealSections.js"
 import AccordionSlider from "../components/AccordionSlider.js"
+import MakeList from "../components/MakeList.js"
 
 class ContactPage {
 	constructor() {
@@ -10,7 +10,7 @@ class ContactPage {
 		new RevealSections(".header", true)
 		new Map()
 		new AccordionSlider()
-		// new LoadData()
+		new MakeList(".address-change", "address")
 	}
 }
 

@@ -51,6 +51,9 @@
 .color-white {
 	color: var(--color-white);
 }
+.bg-white {
+	background-color: var(--color-white);
+}
 /* text */
 .text-style-n {
 	font-style: normal;
